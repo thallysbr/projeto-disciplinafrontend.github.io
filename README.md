@@ -1,5 +1,7 @@
 # Projeto 1 - Programação Web Front-end (ODS 3 - Saúde e Bem-Estar)
 
+## EC47C - Programação Web Front-End - C71 (2024_02)
+
 Este repositório contém o projeto desenvolvido para a disciplina **Programação Web Front-end** do curso de Engenharia de Computação da UTFPR. O objetivo do projeto foi criar um website utilizando apenas HTML e CSS, com foco em promover o Objetivo de Desenvolvimento Sustentável (ODS) 3: **Saúde e Bem-Estar**.
 
 ## Descrição do Projeto
@@ -23,4 +25,6 @@ Abaixo está a organização dos arquivos do projeto:
 ├── style.css           # Arquivo de estilos globais
 ├── SDG-3.svg           # Imagem representando o ODS 3
 └── README.md           # Documentação do projeto
+
+Feito Por Thallys Silva dos Santos Correia e Weslley Marcelo Pereira
 ```
