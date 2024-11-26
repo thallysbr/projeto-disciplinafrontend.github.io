@@ -1,0 +1,172 @@
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #008080;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  padding: 10px 0;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #006666;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.navbar a:hover {
+  background: #004d4d;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 110px;
+  margin-bottom: 60px;
+  background-color: #f5f5f5;
+}
+
+/* Estilização para cada pergunta */
+.question-container {
+  background-color: #ffffff;
+  border: 2px solid #008080;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-header {
+  background-color: #008080;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.options li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.view-answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #008080;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  border: 2px solid #008080;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.view-answer:hover {
+  background-color: white;
+  color: #008080;
+}
+
+/* Estiliza a resposta correta ao clicar no botão */
+input[type="radio"]:checked ~ .options .correct {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+/* Oculta os botões de rádio */
+input[type="radio"] {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #006666;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+}
+
+footer .authors {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+footer .authors a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+footer .authors a:hover {
+  text-decoration: underline;
+}
+
+footer .logo {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
