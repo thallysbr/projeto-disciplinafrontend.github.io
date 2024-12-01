@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
     <style>
       body {
         display: flex;
@@ -110,12 +111,13 @@
       .quiz-button {
         background-color: #ff6f61;
         color: white;
-        padding: 15px 30px;
-        font-size: 1.2rem;
+        padding: 12px 24px;
+        font-size: 1.2rem; 
         font-weight: bold;
         text-decoration: none;
+        font-family: 'Lobster', cursive; 
         border-radius: 8px;
-        display: flex;
+        display: inline-flex; 
         align-items: center;
         justify-content: center;
         gap: 8px;
@@ -123,7 +125,10 @@
         transition: background-color 0.3s ease-in-out, transform 0.2s;
         cursor: pointer;
         margin-top: 20px;
+        margin-left: auto; 
+        margin-right: auto; 
       }
+
 
       .quiz-button:hover {
         background-color: #d95950;
@@ -133,6 +138,14 @@
       .quiz-button .material-icons-outlined {
         font-size: 1.5rem;
       }
+
+      .quiz-button-wrapper {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+      }
+
 
       .image-grid {
         background-color: #f8f9fa;
@@ -223,7 +236,18 @@
         </p>
       </section>
 
-      <a href="./quiz.html" class="quiz-button"> <span class="material-icons-outlined">quiz</span> Ir para o Quiz </a>
+      <section class="styled-section">
+        <h2>Por que o Quiz?</h2>
+        <p>
+          O quiz foi criado para ensinar de forma lúdica e interativa sobre a ODS 3 - Saúde e Bem-Estar. Através de perguntas e respostas, os participantes terão a oportunidade de aprender mais sobre os conceitos essenciais da saúde e como podem contribuir para um futuro mais saudável para todos.
+        </p>
+        <div class="quiz-button-wrapper">
+          <a href="./quiz.html" class="quiz-button">
+            <span class="material-icons-outlined">quiz</span> Ir para o Quiz
+          </a>
+        </div>
+      </section>
+      
 
       <section class="image-grid">
         <h2>Outros Objetivos de Desenvolvimento Sustentável em que acreditamos</h2>
