@@ -3,135 +3,261 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz ODS 3 - Saúde e Bem-Estar</title>
+    <title>ODS 3 - Saúde e Bem-Estar</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
     <link rel="stylesheet" href="./assets/style.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin-top: 110px;
+        margin-bottom: 60px;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .intro-section {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .intro-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 100px;
+        max-width: 1200px;
+        margin: 0 10%;
+      }
+
+      .intro-content img {
+        flex: 1 1 150px;
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        border: 2px solid #008080;
+      }
+
+      .intro-text {
+        flex: 2 1 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: justify;
+        line-height: 1.6;
+      }
+
+      .intro-text h2 {
+        font-size: 1.8rem;
+        color: #006666;
+        margin-bottom: 10px;
+      }
+
+      .highlight-link {
+        align-self: flex-start;
+        background-color: #008080;
+        color: #ffffff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .highlight-link:hover {
+        background-color: #004d4d;
+      }
+
+      .styled-section {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .styled-section h2 {
+        font-size: 1.8rem;
+        color: #006666;
+        margin-bottom: 20px;
+      }
+
+      .styled-section p {
+        text-align: justify;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+
+      .quiz-button {
+        background-color: #ff6f61;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease-in-out, transform 0.2s;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .quiz-button:hover {
+        background-color: #d95950;
+        transform: scale(1.05);
+      }
+
+      .quiz-button .material-icons-outlined {
+        font-size: 1.5rem;
+      }
+
+      .image-grid {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .image-grid h2 {
+        font-size: 1.8rem;
+        color: #006666;
+        margin-bottom: 20px;
+      }
+
+      .image-grid .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-grid .grid-item {
+        flex: 1 1 calc(25% - 20px);
+        max-width: calc(25% - 20px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #ffffff;
+      }
+
+      .image-grid .grid-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .image-grid .grid-item {
+          flex: 1 1 calc(50% - 20px);
+          max-width: calc(50% - 20px);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .image-grid .grid-item {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Quiz - Saúde e Bem-Estar (ODS 3)</h1>
-      <div class="navbar">
+      <h1>ODS 3 - Saúde e Bem-Estar</h1>
+      <nav class="navbar">
         <a href="./index.html"><span class="material-icons-outlined">home</span> Início</a>
-        <a href="./login.html"><span class="material-icons-outlined">login</span> Login</a>
-        <a href="./cadastro.html"><span class="material-icons-outlined">person_add</span> Cadastro</a>
-      </div>
+        <a href="./quiz.html"><span class="material-icons-outlined">quiz</span> Quiz</a>
+        <a href="./sobre.html"><span class="material-icons-outlined">info</span> Sobre</a>
+      </nav>
     </header>
 
-    <div class="container">
-      <div class="question-container">
-        <div class="question-header">Pergunta 1</div>
-        <p>Qual a maneira correta de se alimentar?</p>
-        <input type="radio" id="answer1" name="question1" />
-        <ul class="options">
-          <li>a) Comer apenas fast food.</li>
-          <li>b) Pular refeições para emagrecer.</li>
-          <li class="correct">c) Consumir alimentos ricos em nutrientes e equilibrar as refeições.</li>
-          <li>d) Comer somente doces e salgadinhos.</li>
-        </ul>
-        <label for="answer1" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <div class="question-container">
-        <div class="question-header">Pergunta 2</div>
-        <p>Qual a importância de uma alimentação saudável?</p>
-        <input type="radio" id="answer2" name="question2" />
-        <ul class="options">
-          <li>a) Comer rápido para economizar tempo.</li>
-          <li>b) Substituir refeições por lanches industrializados.</li>
-          <li>c) Aumentar o peso sem controle.</li>
-          <li class="correct">d) Prevenir doenças, melhorar a energia e fortalecer o corpo.</li>
-        </ul>
-        <label for="answer2" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <div class="question-container">
-        <div class="question-header">Pergunta 3</div>
-        <p>Por que é importante fazer exercícios físicos?</p>
-        <input type="radio" id="answer3" name="question3" />
-        <ul class="options">
-          <li>a) Para cansar o corpo e dormir mais.</li>
-          <li class="correct">b) Para melhorar o bem-estar físico e mental, além de prevenir doenças.</li>
-          <li>c) Apenas para ganhar músculos.</li>
-          <li>d) Não é importante, basta se alimentar bem.</li>
-        </ul>
-        <label for="answer3" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <div class="question-container">
-        <div class="question-header">Pergunta 4</div>
-        <p>Qual é a frequência ideal para praticar exercícios físicos?</p>
-        <input type="radio" id="answer4" name="question4" />
-        <ul class="options">
-          <li>a) Apenas nos finais de semana.</li>
-          <li>b) Quando sentir vontade.</li>
-          <li>c) Nunca, pois não são necessários.</li>
-          <li class="correct">d) De duas a cinco vezes por semana, regularmente.</li>
-        </ul>
-        <label for="answer4" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <div class="question-container">
-        <div class="question-header">Pergunta 5</div>
-        <p>Qual hábito é essencial para melhorar a saúde e bem-estar?</p>
-        <input type="radio" id="answer5" name="question5" />
-        <ul class="options">
-          <li class="correct">a) Comer devagar, exercitar-se e beber bastante água.</li>
-          <li>b) Trabalhar sem pausas.</li>
-          <li>c) Dormir menos para aproveitar mais o dia.</li>
-          <li>d) Ficar sentado por longos períodos.</li>
-        </ul>
-        <label for="answer5" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <div class="question-container">
-        <div class="question-header">Pergunta 6</div>
-        <p>Como a prática de atividades físicas beneficia a saúde mental?</p>
-        <input type="radio" id="answer6" name="question6" />
-        <ul class="options">
-          <li>a) Não tem impacto na saúde mental.</li>
-          <li>b) Torna as pessoas mais irritadas.</li>
-          <li class="correct">c) Aumenta o foco, reduz a ansiedade e melhora o humor.</li>
-          <li>d) Gera cansaço extremo e prejudica a memória.</li>
-        </ul>
-        <label for="answer6" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <div class="question-container">
-        <div class="question-header">Pergunta 7</div>
-        <p>O que deve ser evitado para garantir o bem-estar físico e mental?</p>
-        <input type="radio" id="answer7" name="question7" />
-        <ul class="options">
-          <li>a) Consumir alimentos ricos em gorduras saudáveis.</li>
-          <li>b) Fazer pausas no trabalho e se alongar.</li>
-          <li class="correct">c) Dormir menos de seis horas por noite regularmente.</li>
-          <li>d) Beber bastante água ao longo do dia.</li>
-        </ul>
-        <label for="answer7" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <div class="question-container">
-        <div class="question-header">Pergunta 8</div>
-        <p>Por que o sono é importante para o bem-estar?</p>
-        <input type="radio" id="answer8" name="question8" />
-        <ul class="options">
-          <li>a) Não faz diferença na qualidade de vida.</li>
-          <li class="correct">b) Ajuda na recuperação do corpo e na saúde mental.</li>
-          <li>c) Só é necessário para quem pratica exercícios físicos.</li>
-          <li>d) Serve apenas para descansar o corpo, sem impactar a mente.</li>
-        </ul>
-        <label for="answer8" class="view-answer">Ver Resposta</label>
-      </div>
-
-      <footer>
-        <div class="logo"><span class="material-icons-outlined">school</span> ODS 3 - Saúde e Bem-Estar</div>
-        <div class="authors">
-          <a href="https://thallysbr.github.io/programacao-web-front-c71/" target="_blank"><span class="material-icons-outlined">person</span> Thallys Silva dos Santos Correia</a>
-          <a href="https://weslleymarcelo14.github.io/atividadecurriculofrontend/" target="_blank"><span class="material-icons-outlined">person</span> Weslley Marcelo Pereira</a>
+    <main class="container">
+      <section class="intro-section">
+        <div class="intro-content">
+          <img src="./assets/SDG-3.svg" alt="ODS 3 - Saúde e Bem-Estar" />
+          <div class="intro-text">
+            <h2>ODS 3: Saúde e Bem-Estar</h2>
+            <p>
+              Este projeto foi criado pelos alunos para destacar a importância da
+              <strong>Saúde e Bem-Estar</strong> como um dos objetivos de desenvolvimento sustentável.
+            </p>
+            <p>
+              Garantir uma vida saudável e promover o bem-estar para todos, em todas as idades, é essencial para um futuro sustentável. Esta iniciativa reforça nosso compromisso em educar sobre
+              hábitos saudáveis e prevenir doenças.
+            </p>
+            <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank" class="highlight-link"> <span class="material-icons-outlined">info</span> Saiba mais sobre a ODS 3 </a>
+          </div>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <section class="styled-section">
+        <h2>Por que escolher esta ODS?</h2>
+        <p>
+          Os alunos acreditam que a saúde é um direito fundamental e que pequenas mudanças nos hábitos diários podem transformar vidas. O projeto visa inspirar ações que promovam saúde e bem-estar,
+          impactando positivamente as comunidades locais e globais.
+        </p>
+      </section>
+
+      <a href="./quiz.html" class="quiz-button"> <span class="material-icons-outlined">quiz</span> Ir para o Quiz </a>
+
+      <section class="image-grid">
+        <h2>Outros Objetivos de Desenvolvimento Sustentável em que acreditamos</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <a href="https://brasil.un.org/pt-br/sdgs/4" target="_blank">
+              <img src="./assets/SDG-4.svg" alt="ODS 4 - Educação de Qualidade" />
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="https://brasil.un.org/pt-br/sdgs/8" target="_blank">
+              <img src="./assets/SDG-8.svg" alt="ODS 8 - Trabalho Decente e Crescimento Econômico" />
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="https://brasil.un.org/pt-br/sdgs/10" target="_blank">
+              <img src="./assets/SDG-10.svg" alt="ODS 10 - Redução das Desigualdades" />
+            </a>
+          </div>
+          <div class="grid-item">
+            <a href="https://brasil.un.org/pt-br/sdgs/16" target="_blank">
+              <img src="./assets/SDG-16.svg" alt="ODS 16 - Paz, Justiça e Instituições Eficazes" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logo"><span class="material-icons-outlined">school</span> ODS 3 - Saúde e Bem-Estar</div>
+      <div class="authors">
+        <a href="https://thallysbr.github.io/programacao-web-front-c71/" target="_blank"> <span class="material-icons-outlined">person</span> Thallys Correia </a>
+        <a href="https://weslleymarcelo14.github.io/atividadecurriculofrontend/" target="_blank"> <span class="material-icons-outlined">person</span> Weslley Marcelo </a>
+      </div>
+    </footer>
   </body>
 </html>
