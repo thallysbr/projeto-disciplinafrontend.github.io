@@ -73,7 +73,6 @@ body {
   color: #008080;
 }
 
-/* CSS da resposta correta ao clicar no botão */
 input[type="radio"]:checked ~ .options .correct {
   background-color: #d4edda;
   color: #155724;
@@ -82,7 +81,6 @@ input[type="radio"]:checked ~ .options .correct {
   box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
 }
 
-/* Oculta os botões do radio */
 input[type="radio"] {
   display: none;
 }
