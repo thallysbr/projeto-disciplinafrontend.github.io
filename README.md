@@ -37,6 +37,11 @@ Abaixo está a organização dos arquivos do projeto:
 ├── login.html              # Página de login
 ├── cadastro.html           # Página de cadastro
 └── README.md               # Documentação do projeto
-
-Feito Por Thallys Silva dos Santos Correia e Weslley Marcelo Pereira
 ```
+
+## Links Importantes
+
+- **ODS 3 - Saúde e Bem-Estar:** Saiba mais no [site oficial da ONU](https://brasil.un.org/pt-br/sdgs/3).
+- **Autores:**
+  - [Thallys Silva dos Santos Correia](https://thallysbr.github.io/programacao-web-front-c71/)
+  - [Weslley Marcelo Pereira](https://weslleymarcelo14.github.io/atividadecurriculofrontend/)
