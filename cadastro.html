@@ -6,85 +6,20 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
-    <style>
-      body {
-        font-family: "Lato", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-        color: #333;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .form-container {
-        background-color: #ffffff;
-        border: 2px solid #008080;
-        border-radius: 8px;
-        padding: 30px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        max-width: 400px;
-        width: 100%;
-        text-align: center;
-      }
-
-      .form-container h2 {
-        margin-bottom: 20px;
-        font-size: 1.6em;
-        color: #008080;
-      }
-
-      .form-container label {
-        display: block;
-        text-align: left;
-        margin-bottom: 5px;
-        font-size: 1em;
-        color: #333;
-      }
-
-      .form-container input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1em;
-        outline: none;
-        box-sizing: border-box;
-      }
-
-      .form-container button {
-        background-color: #008080;
-        color: #ffffff;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-        cursor: pointer;
-        width: 100%;
-        transition: background-color 0.3s ease;
-      }
-
-      .form-container button:hover {
-        background-color: #006666;
-      }
-
-      .form-container .link {
-        display: block;
-        margin-top: 15px;
-        font-size: 0.9em;
-        color: #008080;
-        text-decoration: none;
-      }
-
-      .form-container .link:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/authentication.css" />
   </head>
   <body>
+    <header>
+      <h1>ODS 3 - Saúde e Bem-Estar</h1>
+      <nav class="navbar">
+        <a href="./index.html"><span class="material-icons-outlined">home</span> Início</a>
+        <a href="./quiz.html"><span class="material-icons-outlined">quiz</span> Quiz</a>
+        <a href="./login.html"><span class="material-icons-outlined">login</span> Login</a>
+        <a href="./cadastro.html"><span class="material-icons-outlined">person_add</span> Cadastro</a>
+      </nav>
+    </header>
+
     <div class="form-container">
       <h2>Cadastro</h2>
       <form action="./login.html" method="GET">
@@ -102,5 +37,13 @@
       </form>
       <a href="./login.html" class="link">Já tem uma conta? Faça login</a>
     </div>
+
+    <footer>
+      <div class="logo"><span class="material-icons-outlined">school</span> ODS 3 - Saúde e Bem-Estar</div>
+      <div class="authors">
+        <a href="https://thallysbr.github.io/programacao-web-front-c71/" target="_blank"> <span class="material-icons-outlined">person</span> Thallys Correia </a>
+        <a href="https://weslleymarcelo14.github.io/atividadecurriculofrontend/" target="_blank"> <span class="material-icons-outlined">person</span> Weslley Marcelo </a>
+      </div>
+    </footer>
   </body>
 </html>
