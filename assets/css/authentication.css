@@ -7,6 +7,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px; /* Espaço reduzido para compensar a altura do cabeçalho */
+  min-height: 100vh;
   height: 100vh;
 }
 
@@ -16,6 +18,8 @@ body {
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-top: 5px; 
+  margin-bottom: 5px; 
   max-width: 360px;
   width: 100%;
   text-align: center;
