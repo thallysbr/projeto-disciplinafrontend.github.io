@@ -7,197 +7,9 @@
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
-    <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" />
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        margin-top: 110px;
-        margin-bottom: 60px;
-        max-width: 1200px;
-        width: 100%;
-      }
-
-      .intro-section {
-        background-color: #f8f9fa;
-        padding: 40px 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
-      }
-
-      .intro-content {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 100px;
-        max-width: 1200px;
-        margin: 0 10%;
-      }
-
-      .intro-content img {
-        flex: 1 1 150px;
-        max-width: 200px;
-        height: auto;
-        border-radius: 8px;
-        border: 2px solid #008080;
-      }
-
-      .intro-text {
-        flex: 2 1 400px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        text-align: justify;
-        line-height: 1.6;
-      }
-
-      .intro-text h2 {
-        font-size: 1.8rem;
-        color: #006666;
-        margin-bottom: 10px;
-      }
-
-      .highlight-link {
-        align-self: flex-start;
-        background-color: #008080;
-        color: #ffffff;
-        padding: 10px 20px;
-        font-size: 1rem;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease-in-out;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .highlight-link:hover {
-        background-color: #004d4d;
-      }
-
-      .styled-section {
-        background-color: #f8f9fa;
-        padding: 40px 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
-      }
-
-      .styled-section h2 {
-        font-size: 1.8rem;
-        color: #006666;
-        margin-bottom: 20px;
-      }
-
-      .styled-section p {
-        text-align: justify;
-        line-height: 1.6;
-        margin-bottom: 15px;
-      }
-
-      .quiz-button {
-        background-color: #ff6f61;
-        color: white;
-        padding: 12px 24px;
-        font-size: 1.2rem; 
-        font-weight: bold;
-        text-decoration: none;
-        font-family: 'Lobster', cursive; 
-        border-radius: 8px;
-        display: inline-flex; 
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease-in-out, transform 0.2s;
-        cursor: pointer;
-        margin-top: 20px;
-        margin-left: auto; 
-        margin-right: auto; 
-      }
-
-
-      .quiz-button:hover {
-        background-color: #d95950;
-        transform: scale(1.05);
-      }
-
-      .quiz-button .material-icons-outlined {
-        font-size: 1.5rem;
-      }
-
-      .quiz-button-wrapper {
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        width: 100%;
-      }
-
-
-      .image-grid {
-        background-color: #f8f9fa;
-        padding: 40px 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
-      }
-
-      .image-grid h2 {
-        font-size: 1.8rem;
-        color: #006666;
-        margin-bottom: 20px;
-      }
-
-      .image-grid .grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .image-grid .grid-item {
-        flex: 1 1 calc(25% - 20px);
-        max-width: calc(25% - 20px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        background-color: #ffffff;
-      }
-
-      .image-grid .grid-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      @media (max-width: 768px) {
-        .image-grid .grid-item {
-          flex: 1 1 calc(50% - 20px);
-          max-width: calc(50% - 20px);
-        }
-      }
-
-      @media (max-width: 480px) {
-        .image-grid .grid-item {
-          flex: 1 1 100%;
-          max-width: 100%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
     <header>
@@ -205,7 +17,8 @@
       <nav class="navbar">
         <a href="./index.html"><span class="material-icons-outlined">home</span> Início</a>
         <a href="./quiz.html"><span class="material-icons-outlined">quiz</span> Quiz</a>
-        <a href="./sobre.html"><span class="material-icons-outlined">info</span> Sobre</a>
+        <a href="./login.html"><span class="material-icons-outlined">login</span> Login</a>
+        <a href="./cadastro.html"><span class="material-icons-outlined">person_add</span> Cadastro</a>
       </nav>
     </header>
 
@@ -239,35 +52,33 @@
       <section class="styled-section">
         <h2>Por que o Quiz?</h2>
         <p>
-          O quiz foi criado para ensinar de forma lúdica e interativa sobre a ODS 3 - Saúde e Bem-Estar. Através de perguntas e respostas, os participantes terão a oportunidade de aprender mais sobre os conceitos essenciais da saúde e como podem contribuir para um futuro mais saudável para todos.
+          O quiz foi criado para ensinar de forma lúdica e interativa sobre a ODS 3 - Saúde e Bem-Estar. Através de perguntas e respostas, os participantes terão a oportunidade de aprender mais sobre
+          os conceitos essenciais da saúde e como podem contribuir para um futuro mais saudável para todos.
         </p>
         <div class="quiz-button-wrapper">
-          <a href="./quiz.html" class="quiz-button">
-            <span class="material-icons-outlined">quiz</span> Ir para o Quiz
-          </a>
+          <a href="./quiz.html" class="quiz-button"> <span class="material-icons-outlined">quiz</span> Ir para o Quiz </a>
         </div>
       </section>
-      
 
-      <section class="image-grid">
+      <section class="image-gallery">
         <h2>Outros Objetivos de Desenvolvimento Sustentável em que acreditamos</h2>
-        <div class="grid">
-          <div class="grid-item">
+        <div class="image-list">
+          <div class="image-item">
             <a href="https://brasil.un.org/pt-br/sdgs/4" target="_blank">
               <img src="./assets/SDG-4.svg" alt="ODS 4 - Educação de Qualidade" />
             </a>
           </div>
-          <div class="grid-item">
+          <div class="image-item">
             <a href="https://brasil.un.org/pt-br/sdgs/8" target="_blank">
               <img src="./assets/SDG-8.svg" alt="ODS 8 - Trabalho Decente e Crescimento Econômico" />
             </a>
           </div>
-          <div class="grid-item">
+          <div class="image-item">
             <a href="https://brasil.un.org/pt-br/sdgs/10" target="_blank">
               <img src="./assets/SDG-10.svg" alt="ODS 10 - Redução das Desigualdades" />
             </a>
           </div>
-          <div class="grid-item">
+          <div class="image-item">
             <a href="https://brasil.un.org/pt-br/sdgs/16" target="_blank">
               <img src="./assets/SDG-16.svg" alt="ODS 16 - Paz, Justiça e Instituições Eficazes" />
             </a>
