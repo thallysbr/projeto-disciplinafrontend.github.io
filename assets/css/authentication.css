@@ -20,6 +20,10 @@ body {
   margin-top: 50px; 
 }
 
+.admin-page .form-container {
+  margin-top: 70px; 
+}
+
 .form-container {
   background-color: #ffffff;
   border: 2px solid #008080;
@@ -68,6 +72,7 @@ body {
   cursor: pointer;
   width: 100%;
   transition: background-color 0.3s ease;
+  margin-bottom: 4px;
 }
 
 .form-container button:hover {
@@ -80,6 +85,10 @@ body {
   font-size: 0.9em;
   color: #008080;
   text-decoration: none;
+}
+
+.form-container .link:hover {
+  text-decoration: underline;
 }
 
 .form-container .link:hover {

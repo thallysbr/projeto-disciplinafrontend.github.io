@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração de Usuários</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/authentication.css">
+</head>
+<body class="admin-page">
+    <header>
+        <h1>ODS 3 - Administração de Usuários</h1>
+        <nav class="navbar">
+            <a href="./index.html"><span class="material-icons-outlined">home</span> Início</a>
+            <a href="./quiz.html"><span class="material-icons-outlined">quiz</span> Quiz</a>
+            <a href="./login.html"><span class="material-icons-outlined">login</span> Login</a>
+            <a href="./cadastro.html"><span class="material-icons-outlined">person_add</span> Cadastro</a>
+        </nav>
+    </header>
+
+    <div class="form-container">    
+        <h2>Cadastro de Usuários</h2>
+        <form id="userForm">
+            <label for="userName">Nome Completo</label>
+            <input type="text" id="userName" required>
+            <label for="userEmail">E-mail</label>
+            <input type="email" id="userEmail" required>
+            <button type="submit" class="form-button">Cadastrar</button>
+            <button type="button" id="clearFields" class="form-button">Limpar</button>
+        </form>
+        <h2>Usuários Cadastrados</h2>
+        <input type="text" id="search" placeholder="Pesquisar...">
+        <button id="searchButton" class="form-button">Pesquisar</button>
+        <ul id="userList"></ul>
+        <button id="clearAll" class="form-button">Excluir Todos</button>
+    </div>
+
+    <footer>
+        <div class="logo"><span class="material-icons-outlined">school</span> ODS 3 - Saúde e Bem-Estar</div>
+        <div class="authors">
+            <a href="https://thallysbr.github.io/programacao-web-front-c71/" target="_blank"> <span class="material-icons-outlined">person</span> Thallys Correia </a>
+            <a href="https://weslleymarcelo14.github.io/atividadecurriculofrontend/" target="_blank"> <span class="material-icons-outlined">person</span> Weslley Marcelo </a>
+        </div>
+    </footer>
+
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
