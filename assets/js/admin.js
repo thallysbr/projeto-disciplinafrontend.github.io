@@ -1,73 +1,83 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const userForm = document.getElementById("userForm");
-    const userName = document.getElementById("userName");
-    const userEmail = document.getElementById("userEmail");
-    const userList = document.getElementById("userList");
-    const search = document.getElementById("search");
-    const clearAll = document.getElementById("clearAll");
-    const clearFields = document.getElementById("clearFields");
+    const formularioUsuario = document.getElementById("userForm");
+    const nomeUsuario = document.getElementById("userName");
+    const emailUsuario = document.getElementById("userEmail");
+    const listaUsuarios = document.getElementById("userList");
+    const pesquisa = document.getElementById("search");
+    const botaoPesquisar = document.getElementById("searchButton");
+    const limparTudo = document.getElementById("clearAll");
+    const limparCampos = document.getElementById("clearFields");
     
-    function loadUsers() {
-        userList.innerHTML = "";
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-        users.forEach(user => addUserToList(user));
+    let usuariosFiltrados = [];
+    
+    function carregarUsuarios(usuariosParaExibir = []) {
+        listaUsuarios.innerHTML = "";
+        usuariosParaExibir.forEach(usuario => adicionarUsuarioNaLista(usuario));
     }
     
-    function addUserToList(user) {
+    function adicionarUsuarioNaLista(usuario) {
         const li = document.createElement("li");
-        li.textContent = `${user.date} - ${user.name} (${user.email})`;
+        li.textContent = `${usuario.data} - ${usuario.nome} (${usuario.email})`;
         
-        const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Excluir";
-        deleteBtn.onclick = function () {
-            removeUser(user);
+        const botaoExcluir = document.createElement("button");
+        botaoExcluir.textContent = "Excluir";
+        botaoExcluir.onclick = function () {
+            removerUsuario(usuario);
         };
         
-        li.appendChild(deleteBtn);
-        userList.appendChild(li);
+        li.appendChild(botaoExcluir);
+        listaUsuarios.appendChild(li);
     }
     
-    function removeUser(userToRemove) {
-        let users = JSON.parse(localStorage.getItem("users")) || [];
-        users = users.filter(user => user.email !== userToRemove.email);
-        localStorage.setItem("users", JSON.stringify(users));
-        loadUsers();
+    function removerUsuario(usuarioParaRemover) {
+        let usuarios = JSON.parse(localStorage.getItem("users")) || [];
+        usuarios = usuarios.filter(usuario => usuario.email !== usuarioParaRemover.email);
+        localStorage.setItem("users", JSON.stringify(usuarios));
+        
+        usuariosFiltrados = usuariosFiltrados.filter(usuario => usuario.email !== usuarioParaRemover.email);
+        carregarUsuarios(usuariosFiltrados);
     }
     
-    userForm.addEventListener("submit", function (event) {
+    formularioUsuario.addEventListener("submit", function (event) {
         event.preventDefault();
-        const newUser = {
-            name: userName.value,
-            email: userEmail.value,
-            date: new Date().toLocaleString()
+        const novoUsuario = {
+            nome: nomeUsuario.value,
+            email: emailUsuario.value,
+            data: new Date().toLocaleString()
         };
         
-        let users = JSON.parse(localStorage.getItem("users")) || [];
-        users.push(newUser);
-        localStorage.setItem("users", JSON.stringify(users));
+        let usuarios = JSON.parse(localStorage.getItem("users")) || [];
+        usuarios.push(novoUsuario);
+        localStorage.setItem("users", JSON.stringify(usuarios));
         
-        addUserToList(newUser);
-        userName.value = "";
-        userEmail.value = "";
+        nomeUsuario.value = "";
+        emailUsuario.value = "";
+        
+        carregarUsuarios([novoUsuario]);
     });
     
-    search.addEventListener("input", function () {
-        const searchTerm = search.value.toLowerCase();
-        const users = JSON.parse(localStorage.getItem("users")) || [];
-        userList.innerHTML = "";
-        users.filter(user => user.name.toLowerCase().includes(searchTerm) || user.email.toLowerCase().includes(searchTerm))
-             .forEach(user => addUserToList(user));
+    botaoPesquisar.addEventListener("click", function () {
+        const termoPesquisa = pesquisa.value.toLowerCase();
+        if (termoPesquisa === "") {
+            carregarUsuarios([]);
+            return;
+        }
+        const usuarios = JSON.parse(localStorage.getItem("users")) || [];
+        usuariosFiltrados = usuarios.filter(usuario => usuario.nome.toLowerCase().includes(termoPesquisa) || usuario.email.toLowerCase().includes(termoPesquisa));
+        carregarUsuarios(usuariosFiltrados);
     });
     
-    clearAll.addEventListener("click", function () {
+    limparTudo.addEventListener("click", function () {
         localStorage.removeItem("users");
-        loadUsers();
+        usuariosFiltrados = [];
+        carregarUsuarios([]);
     });
     
-    clearFields.addEventListener("click", function () {
-        userName.value = "";
-        userEmail.value = "";
+    limparCampos.addEventListener("click", function () {
+        nomeUsuario.value = "";
+        emailUsuario.value = "";
     });
     
-    loadUsers();
+    pesquisa.value = "";
+    carregarUsuarios([]);
 });

@@ -91,6 +91,11 @@ body {
   text-decoration: underline;
 }
 
-.form-container .link:hover {
-  text-decoration: underline;
+.form-container .form-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.form-container .form-button:last-child {
+  margin-right: 0;
 }
