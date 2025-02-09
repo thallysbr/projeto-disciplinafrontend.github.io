@@ -25,6 +25,7 @@ body {
   width: 100%;
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .question-header {
@@ -46,6 +47,37 @@ body {
 .options li {
   margin-bottom: 10px;
   font-size: 1.1em;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease;
+}
+
+.options li:hover {
+  background-color: #f0f0f0;
+}
+
+.options li.selected {
+  background-color: #e2e2e2;
+}
+
+/* Quando a resposta for revelada, o item correto ganha destaque */
+.question-container.revealed .options li.correct {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+}
+
+/* Caso o usuário tenha selecionado uma opção incorreta */
+.question-container.revealed .options li.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
 }
 
 .view-answer {
@@ -72,14 +104,9 @@ body {
   color: #008080;
 }
 
-input[type="radio"]:checked ~ .options .correct {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+.feedback {
+  margin-top: 10px;
+  font-size: 1em;
+  text-align: center;
   font-weight: bold;
-  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
-}
-
-input[type="radio"] {
-  display: none;
 }
