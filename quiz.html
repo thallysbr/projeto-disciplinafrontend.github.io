@@ -17,122 +17,124 @@
         <a href="./index.html"><span class="material-icons-outlined">home</span> Início</a>
         <a href="./login.html"><span class="material-icons-outlined">login</span> Login</a>
         <a href="./cadastro.html"><span class="material-icons-outlined">person_add</span> Cadastro</a>
-        <a href="./admin.html"><span class="material-icons-outlined">admin_panel_settings</span> Admin</a>  
+        <a href="./admin.html"><span class="material-icons-outlined">admin_panel_settings</span> Admin</a>
       </div>
     </header>
 
     <div class="container">
-      <div class="question-container">
+      <div class="question-container" data-question="1">
         <div class="question-header">Pergunta 1</div>
         <p>Qual a maneira correta de se alimentar?</p>
-        <input type="radio" id="answer1" name="question1" />
         <ul class="options">
-          <li>a) Comer apenas fast food.</li>
-          <li>b) Pular refeições para emagrecer.</li>
-          <li class="correct">c) Consumir alimentos ricos em nutrientes e equilibrar as refeições.</li>
-          <li>d) Comer somente doces e salgadinhos.</li>
+          <li data-option="a">a) Comer apenas fast food.</li>
+          <li data-option="b">b) Pular refeições para emagrecer.</li>
+          <li data-option="c" class="correct">c) Consumir alimentos ricos em nutrientes e equilibrar as refeições.</li>
+          <li data-option="d">d) Comer somente doces e salgadinhos.</li>
         </ul>
-        <label for="answer1" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
-      <div class="question-container">
+      <div class="question-container" data-question="2">
         <div class="question-header">Pergunta 2</div>
         <p>Qual a importância de uma alimentação saudável?</p>
-        <input type="radio" id="answer2" name="question2" />
         <ul class="options">
-          <li>a) Comer rápido para economizar tempo.</li>
-          <li>b) Substituir refeições por lanches industrializados.</li>
-          <li>c) Aumentar o peso sem controle.</li>
-          <li class="correct">d) Prevenir doenças, melhorar a energia e fortalecer o corpo.</li>
+          <li data-option="a">a) Comer rápido para economizar tempo.</li>
+          <li data-option="b">b) Substituir refeições por lanches industrializados.</li>
+          <li data-option="c">c) Aumentar o peso sem controle.</li>
+          <li data-option="d" class="correct">d) Prevenir doenças, melhorar a energia e fortalecer o corpo.</li>
         </ul>
-        <label for="answer2" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
-      <div class="question-container">
+      <div class="question-container" data-question="3">
         <div class="question-header">Pergunta 3</div>
         <p>Por que é importante fazer exercícios físicos?</p>
-        <input type="radio" id="answer3" name="question3" />
         <ul class="options">
-          <li>a) Para cansar o corpo e dormir mais.</li>
-          <li class="correct">b) Para melhorar o bem-estar físico e mental, além de prevenir doenças.</li>
-          <li>c) Apenas para ganhar músculos.</li>
-          <li>d) Não é importante, basta se alimentar bem.</li>
+          <li data-option="a">a) Para cansar o corpo e dormir mais.</li>
+          <li data-option="b" class="correct">b) Para melhorar o bem-estar físico e mental, além de prevenir doenças.</li>
+          <li data-option="c">c) Apenas para ganhar músculos.</li>
+          <li data-option="d">d) Não é importante, basta se alimentar bem.</li>
         </ul>
-        <label for="answer3" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
-      <div class="question-container">
+      <div class="question-container" data-question="4">
         <div class="question-header">Pergunta 4</div>
         <p>Qual é a frequência ideal para praticar exercícios físicos?</p>
-        <input type="radio" id="answer4" name="question4" />
         <ul class="options">
-          <li>a) Apenas nos finais de semana.</li>
-          <li>b) Quando sentir vontade.</li>
-          <li>c) Nunca, pois não são necessários.</li>
-          <li class="correct">d) De duas a cinco vezes por semana, regularmente.</li>
+          <li data-option="a">a) Apenas nos finais de semana.</li>
+          <li data-option="b">b) Quando sentir vontade.</li>
+          <li data-option="c">c) Nunca, pois não são necessários.</li>
+          <li data-option="d" class="correct">d) De duas a cinco vezes por semana, regularmente.</li>
         </ul>
-        <label for="answer4" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
-      <div class="question-container">
+      <div class="question-container" data-question="5">
         <div class="question-header">Pergunta 5</div>
         <p>Qual hábito é essencial para melhorar a saúde e bem-estar?</p>
-        <input type="radio" id="answer5" name="question5" />
         <ul class="options">
-          <li class="correct">a) Comer devagar, exercitar-se e beber bastante água.</li>
-          <li>b) Trabalhar sem pausas.</li>
-          <li>c) Dormir menos para aproveitar mais o dia.</li>
-          <li>d) Ficar sentado por longos períodos.</li>
+          <li data-option="a" class="correct">a) Comer devagar, exercitar-se e beber bastante água.</li>
+          <li data-option="b">b) Trabalhar sem pausas.</li>
+          <li data-option="c">c) Dormir menos para aproveitar mais o dia.</li>
+          <li data-option="d">d) Ficar sentado por longos períodos.</li>
         </ul>
-        <label for="answer5" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
-      <div class="question-container">
+      <div class="question-container" data-question="6">
         <div class="question-header">Pergunta 6</div>
         <p>Como a prática de atividades físicas beneficia a saúde mental?</p>
-        <input type="radio" id="answer6" name="question6" />
         <ul class="options">
-          <li>a) Não tem impacto na saúde mental.</li>
-          <li>b) Torna as pessoas mais irritadas.</li>
-          <li class="correct">c) Aumenta o foco, reduz a ansiedade e melhora o humor.</li>
-          <li>d) Gera cansaço extremo e prejudica a memória.</li>
+          <li data-option="a">a) Não tem impacto na saúde mental.</li>
+          <li data-option="b">b) Torna as pessoas mais irritadas.</li>
+          <li data-option="c" class="correct">c) Aumenta o foco, reduz a ansiedade e melhora o humor.</li>
+          <li data-option="d">d) Gera cansaço extremo e prejudica a memória.</li>
         </ul>
-        <label for="answer6" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
-      <div class="question-container">
+      <div class="question-container" data-question="7">
         <div class="question-header">Pergunta 7</div>
         <p>O que deve ser evitado para garantir o bem-estar físico e mental?</p>
-        <input type="radio" id="answer7" name="question7" />
         <ul class="options">
-          <li>a) Consumir alimentos ricos em gorduras saudáveis.</li>
-          <li>b) Fazer pausas no trabalho e se alongar.</li>
-          <li class="correct">c) Dormir menos de seis horas por noite regularmente.</li>
-          <li>d) Beber bastante água ao longo do dia.</li>
+          <li data-option="a">a) Consumir alimentos ricos em gorduras saudáveis.</li>
+          <li data-option="b">b) Fazer pausas no trabalho e se alongar.</li>
+          <li data-option="c" class="correct">c) Dormir menos de seis horas por noite regularmente.</li>
+          <li data-option="d">d) Beber bastante água ao longo do dia.</li>
         </ul>
-        <label for="answer7" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
-      <div class="question-container">
+      <div class="question-container" data-question="8">
         <div class="question-header">Pergunta 8</div>
         <p>Por que o sono é importante para o bem-estar?</p>
-        <input type="radio" id="answer8" name="question8" />
         <ul class="options">
-          <li>a) Não faz diferença na qualidade de vida.</li>
-          <li class="correct">b) Ajuda na recuperação do corpo e na saúde mental.</li>
-          <li>c) Só é necessário para quem pratica exercícios físicos.</li>
-          <li>d) Serve apenas para descansar o corpo, sem impactar a mente.</li>
+          <li data-option="a">a) Não faz diferença na qualidade de vida.</li>
+          <li data-option="b" class="correct">b) Ajuda na recuperação do corpo e na saúde mental.</li>
+          <li data-option="c">c) Só é necessário para quem pratica exercícios físicos.</li>
+          <li data-option="d">d) Serve apenas para descansar o corpo, sem impactar a mente.</li>
         </ul>
-        <label for="answer8" class="view-answer">Ver Resposta</label>
+        <button class="view-answer">Ver Resposta</button>
+        <div class="feedback"></div>
       </div>
 
       <footer>
         <div class="logo"><span class="material-icons-outlined">school</span> ODS 3 - Saúde e Bem-Estar</div>
         <div class="authors">
-          <a href="https://thallysbr.github.io/programacao-web-front-c71/" target="_blank"><span class="material-icons-outlined">person</span> Thallys Silva dos Santos Correia</a>
-          <a href="https://weslleymarcelo14.github.io/atividadecurriculofrontend/" target="_blank"><span class="material-icons-outlined">person</span> Weslley Marcelo Pereira</a>
+          <a href="https://thallysbr.github.io/programacao-web-front-c71/" target="_blank"> <span class="material-icons-outlined">person</span> Thallys Silva dos Santos Correia </a>
+          <a href="https://weslleymarcelo14.github.io/atividadecurriculofrontend/" target="_blank"> <span class="material-icons-outlined">person</span> Weslley Marcelo Pereira </a>
         </div>
       </footer>
     </div>
+
+    <script src="./assets/js/quiz.js"></script>
   </body>
 </html>
