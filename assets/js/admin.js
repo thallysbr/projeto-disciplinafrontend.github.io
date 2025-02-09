@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     
     let usuariosFiltrados = [];
     
-    function carregarUsuarios(usuariosParaExibir = []) {
+    function carregarUsuarios(usuariosParaExibir = null) {
         listaUsuarios.innerHTML = "";
-        usuariosParaExibir.forEach(usuario => adicionarUsuarioNaLista(usuario));
+        const usuarios = usuariosParaExibir || JSON.parse(localStorage.getItem("users")) || [];
+        usuarios.forEach(usuario => adicionarUsuarioNaLista(usuario));
     }
     
     function adicionarUsuarioNaLista(usuario) {
@@ -79,5 +80,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     pesquisa.value = "";
-    carregarUsuarios([]);
+    carregarUsuarios();
 });
