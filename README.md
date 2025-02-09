@@ -29,7 +29,7 @@ Abaixo está a organização dos arquivos do projeto:
 │   │   ├── authentication.css  # Estilos das páginas de login e cadastro
 │   ├── /js/
 │   │   ├── admin.js        # Script para a página de administração (usa `localStorage`)
-│   │   ├── quiz.js         # Script para a página do quizz
+│   │   ├── quiz.js         # Script para a página do quiz
 │   ├── favicon.ico         # Ícone do site
 │   ├── SDG-3.svg           # Imagem representando o ODS 3
 │   ├── SDG-4.svg           # Imagem representando o ODS 4
